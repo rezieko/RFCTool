@@ -34,9 +34,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.DenyPermitCombo = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SrcPort2Checked = new System.Windows.Forms.CheckBox();
+            this.SrcPort2Text = new System.Windows.Forms.TextBox();
+            this.SrcOpPortText = new System.Windows.Forms.TextBox();
             this.label2131 = new System.Windows.Forms.Label();
-            this.SrcIntText = new System.Windows.Forms.TextBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.SrcIntChecked = new System.Windows.Forms.CheckBox();
             this.SrcHostChecked = new System.Windows.Forms.CheckBox();
             this.SrcOpPortChecked = new System.Windows.Forms.CheckBox();
             this.SrcMaskText = new System.Windows.Forms.TextBox();
@@ -46,21 +48,17 @@
             this.ProtoCombo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.SrcOpPortText = new System.Windows.Forms.TextBox();
-            this.SrcPort2Text = new System.Windows.Forms.TextBox();
-            this.SrcPort2Checked = new System.Windows.Forms.CheckBox();
+            this.DestPort2Checked = new System.Windows.Forms.CheckBox();
+            this.DestHostChecked = new System.Windows.Forms.CheckBox();
+            this.DestPort2Text = new System.Windows.Forms.TextBox();
+            this.DestOpPortChecked = new System.Windows.Forms.CheckBox();
+            this.DestOpPortText = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.DestIntChecked = new System.Windows.Forms.CheckBox();
+            this.DestMaskText = new System.Windows.Forms.TextBox();
+            this.DestAddText = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.DestAddText = new System.Windows.Forms.TextBox();
-            this.DestMaskText = new System.Windows.Forms.TextBox();
-            this.DestIntText = new System.Windows.Forms.TextBox();
-            this.DestIntChecked = new System.Windows.Forms.CheckBox();
-            this.DestOpPortChecked = new System.Windows.Forms.CheckBox();
-            this.DestHostChecked = new System.Windows.Forms.CheckBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.DestOpPortText = new System.Windows.Forms.TextBox();
-            this.DestPort2Text = new System.Windows.Forms.TextBox();
-            this.DestPort2Checked = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -90,6 +88,7 @@
             this.AclIdText.Name = "AclIdText";
             this.AclIdText.Size = new System.Drawing.Size(83, 20);
             this.AclIdText.TabIndex = 2;
+            this.AclIdText.TextChanged += new System.EventHandler(this.AclIdText_TextChanged);
             // 
             // label2
             // 
@@ -117,8 +116,7 @@
             this.groupBox1.Controls.Add(this.SrcPort2Text);
             this.groupBox1.Controls.Add(this.SrcOpPortText);
             this.groupBox1.Controls.Add(this.label2131);
-            this.groupBox1.Controls.Add(this.SrcIntText);
-            this.groupBox1.Controls.Add(this.checkBox4);
+            this.groupBox1.Controls.Add(this.SrcIntChecked);
             this.groupBox1.Controls.Add(this.SrcHostChecked);
             this.groupBox1.Controls.Add(this.SrcOpPortChecked);
             this.groupBox1.Controls.Add(this.SrcMaskText);
@@ -128,36 +126,53 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(204, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(581, 96);
+            this.groupBox1.Size = new System.Drawing.Size(647, 68);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Source";
             // 
+            // SrcPort2Checked
+            // 
+            this.SrcPort2Checked.AutoSize = true;
+            this.SrcPort2Checked.Location = new System.Drawing.Point(454, 44);
+            this.SrcPort2Checked.Name = "SrcPort2Checked";
+            this.SrcPort2Checked.Size = new System.Drawing.Size(76, 17);
+            this.SrcPort2Checked.TabIndex = 14;
+            this.SrcPort2Checked.Text = "Use Port 2";
+            this.SrcPort2Checked.UseVisualStyleBackColor = true;
+            // 
+            // SrcPort2Text
+            // 
+            this.SrcPort2Text.Location = new System.Drawing.Point(536, 42);
+            this.SrcPort2Text.Name = "SrcPort2Text";
+            this.SrcPort2Text.Size = new System.Drawing.Size(100, 20);
+            this.SrcPort2Text.TabIndex = 13;
+            // 
+            // SrcOpPortText
+            // 
+            this.SrcOpPortText.Location = new System.Drawing.Point(536, 17);
+            this.SrcOpPortText.Name = "SrcOpPortText";
+            this.SrcOpPortText.Size = new System.Drawing.Size(100, 20);
+            this.SrcOpPortText.TabIndex = 9;
+            // 
             // label2131
             // 
             this.label2131.AutoSize = true;
-            this.label2131.Location = new System.Drawing.Point(351, 21);
+            this.label2131.Location = new System.Drawing.Point(430, 20);
             this.label2131.Name = "label2131";
             this.label2131.Size = new System.Drawing.Size(100, 13);
             this.label2131.TabIndex = 8;
             this.label2131.Text = "Operator and Port 1";
             // 
-            // SrcIntText
+            // SrcIntChecked
             // 
-            this.SrcIntText.Location = new System.Drawing.Point(118, 70);
-            this.SrcIntText.Name = "SrcIntText";
-            this.SrcIntText.Size = new System.Drawing.Size(86, 20);
-            this.SrcIntText.TabIndex = 7;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(10, 71);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(90, 17);
-            this.checkBox4.TabIndex = 6;
-            this.checkBox4.Text = "Use Interface";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.SrcIntChecked.AutoSize = true;
+            this.SrcIntChecked.Location = new System.Drawing.Point(328, 45);
+            this.SrcIntChecked.Name = "SrcIntChecked";
+            this.SrcIntChecked.Size = new System.Drawing.Size(90, 17);
+            this.SrcIntChecked.TabIndex = 6;
+            this.SrcIntChecked.Text = "Use Interface";
+            this.SrcIntChecked.UseVisualStyleBackColor = true;
             // 
             // SrcHostChecked
             // 
@@ -172,7 +187,7 @@
             // SrcOpPortChecked
             // 
             this.SrcOpPortChecked.AutoSize = true;
-            this.SrcOpPortChecked.Location = new System.Drawing.Point(224, 19);
+            this.SrcOpPortChecked.Location = new System.Drawing.Point(314, 18);
             this.SrcOpPortChecked.Name = "SrcOpPortChecked";
             this.SrcOpPortChecked.Size = new System.Drawing.Size(110, 17);
             this.SrcOpPortChecked.TabIndex = 4;
@@ -188,7 +203,7 @@
             // 
             // SrcAddText
             // 
-            this.SrcAddText.Location = new System.Drawing.Point(118, 17);
+            this.SrcAddText.Location = new System.Drawing.Point(194, 16);
             this.SrcAddText.Name = "SrcAddText";
             this.SrcAddText.Size = new System.Drawing.Size(100, 20);
             this.SrcAddText.TabIndex = 2;
@@ -207,9 +222,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(7, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 13);
+            this.label4.Size = new System.Drawing.Size(162, 13);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Source Address";
+            this.label4.Text = "Source Address | Host | Interface";
             // 
             // ProtoCombo
             // 
@@ -237,101 +252,27 @@
             this.groupBox2.Controls.Add(this.DestOpPortText);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.DestIntChecked);
-            this.groupBox2.Controls.Add(this.DestIntText);
             this.groupBox2.Controls.Add(this.DestMaskText);
             this.groupBox2.Controls.Add(this.DestAddText);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(204, 115);
+            this.groupBox2.Location = new System.Drawing.Point(204, 87);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(581, 104);
+            this.groupBox2.Size = new System.Drawing.Size(647, 77);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Destination";
             // 
-            // SrcOpPortText
+            // DestPort2Checked
             // 
-            this.SrcOpPortText.Location = new System.Drawing.Point(457, 18);
-            this.SrcOpPortText.Name = "SrcOpPortText";
-            this.SrcOpPortText.Size = new System.Drawing.Size(100, 20);
-            this.SrcOpPortText.TabIndex = 9;
-            // 
-            // SrcPort2Text
-            // 
-            this.SrcPort2Text.Location = new System.Drawing.Point(457, 43);
-            this.SrcPort2Text.Name = "SrcPort2Text";
-            this.SrcPort2Text.Size = new System.Drawing.Size(100, 20);
-            this.SrcPort2Text.TabIndex = 13;
-            // 
-            // SrcPort2Checked
-            // 
-            this.SrcPort2Checked.AutoSize = true;
-            this.SrcPort2Checked.Location = new System.Drawing.Point(375, 45);
-            this.SrcPort2Checked.Name = "SrcPort2Checked";
-            this.SrcPort2Checked.Size = new System.Drawing.Size(76, 17);
-            this.SrcPort2Checked.TabIndex = 14;
-            this.SrcPort2Checked.Text = "Use Port 2";
-            this.SrcPort2Checked.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 19);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 13);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Destination Address";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 46);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Destination Mask";
-            // 
-            // DestAddText
-            // 
-            this.DestAddText.Location = new System.Drawing.Point(118, 16);
-            this.DestAddText.Name = "DestAddText";
-            this.DestAddText.Size = new System.Drawing.Size(100, 20);
-            this.DestAddText.TabIndex = 10;
-            // 
-            // DestMaskText
-            // 
-            this.DestMaskText.Location = new System.Drawing.Point(118, 43);
-            this.DestMaskText.Name = "DestMaskText";
-            this.DestMaskText.Size = new System.Drawing.Size(100, 20);
-            this.DestMaskText.TabIndex = 11;
-            // 
-            // DestIntText
-            // 
-            this.DestIntText.Location = new System.Drawing.Point(118, 70);
-            this.DestIntText.Name = "DestIntText";
-            this.DestIntText.Size = new System.Drawing.Size(86, 20);
-            this.DestIntText.TabIndex = 12;
-            // 
-            // DestIntChecked
-            // 
-            this.DestIntChecked.AutoSize = true;
-            this.DestIntChecked.Location = new System.Drawing.Point(10, 72);
-            this.DestIntChecked.Name = "DestIntChecked";
-            this.DestIntChecked.Size = new System.Drawing.Size(90, 17);
-            this.DestIntChecked.TabIndex = 13;
-            this.DestIntChecked.Text = "Use Interface";
-            this.DestIntChecked.UseVisualStyleBackColor = true;
-            // 
-            // DestOpPortChecked
-            // 
-            this.DestOpPortChecked.AutoSize = true;
-            this.DestOpPortChecked.Location = new System.Drawing.Point(224, 18);
-            this.DestOpPortChecked.Name = "DestOpPortChecked";
-            this.DestOpPortChecked.Size = new System.Drawing.Size(110, 17);
-            this.DestOpPortChecked.TabIndex = 14;
-            this.DestOpPortChecked.Text = "Operator and Port";
-            this.DestOpPortChecked.UseVisualStyleBackColor = true;
+            this.DestPort2Checked.AutoSize = true;
+            this.DestPort2Checked.Location = new System.Drawing.Point(454, 44);
+            this.DestPort2Checked.Name = "DestPort2Checked";
+            this.DestPort2Checked.Size = new System.Drawing.Size(76, 17);
+            this.DestPort2Checked.TabIndex = 16;
+            this.DestPort2Checked.Text = "Use Port 2";
+            this.DestPort2Checked.UseVisualStyleBackColor = true;
             // 
             // DestHostChecked
             // 
@@ -343,38 +284,80 @@
             this.DestHostChecked.Text = "Apply to 1 Host";
             this.DestHostChecked.UseVisualStyleBackColor = true;
             // 
+            // DestPort2Text
+            // 
+            this.DestPort2Text.Location = new System.Drawing.Point(536, 42);
+            this.DestPort2Text.Name = "DestPort2Text";
+            this.DestPort2Text.Size = new System.Drawing.Size(100, 20);
+            this.DestPort2Text.TabIndex = 13;
+            // 
+            // DestOpPortChecked
+            // 
+            this.DestOpPortChecked.AutoSize = true;
+            this.DestOpPortChecked.Location = new System.Drawing.Point(308, 18);
+            this.DestOpPortChecked.Name = "DestOpPortChecked";
+            this.DestOpPortChecked.Size = new System.Drawing.Size(110, 17);
+            this.DestOpPortChecked.TabIndex = 14;
+            this.DestOpPortChecked.Text = "Operator and Port";
+            this.DestOpPortChecked.UseVisualStyleBackColor = true;
+            // 
+            // DestOpPortText
+            // 
+            this.DestOpPortText.Location = new System.Drawing.Point(536, 16);
+            this.DestOpPortText.Name = "DestOpPortText";
+            this.DestOpPortText.Size = new System.Drawing.Size(100, 20);
+            this.DestOpPortText.TabIndex = 9;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(351, 19);
+            this.label9.Location = new System.Drawing.Point(430, 19);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 13);
             this.label9.TabIndex = 8;
             this.label9.Text = "Operator and Port 1";
             // 
-            // DestOpPortText
+            // DestIntChecked
             // 
-            this.DestOpPortText.Location = new System.Drawing.Point(457, 16);
-            this.DestOpPortText.Name = "DestOpPortText";
-            this.DestOpPortText.Size = new System.Drawing.Size(100, 20);
-            this.DestOpPortText.TabIndex = 9;
+            this.DestIntChecked.AutoSize = true;
+            this.DestIntChecked.Location = new System.Drawing.Point(328, 46);
+            this.DestIntChecked.Name = "DestIntChecked";
+            this.DestIntChecked.Size = new System.Drawing.Size(90, 17);
+            this.DestIntChecked.TabIndex = 13;
+            this.DestIntChecked.Text = "Use Interface";
+            this.DestIntChecked.UseVisualStyleBackColor = true;
             // 
-            // DestPort2Text
+            // DestMaskText
             // 
-            this.DestPort2Text.Location = new System.Drawing.Point(457, 42);
-            this.DestPort2Text.Name = "DestPort2Text";
-            this.DestPort2Text.Size = new System.Drawing.Size(100, 20);
-            this.DestPort2Text.TabIndex = 13;
+            this.DestMaskText.Location = new System.Drawing.Point(118, 43);
+            this.DestMaskText.Name = "DestMaskText";
+            this.DestMaskText.Size = new System.Drawing.Size(100, 20);
+            this.DestMaskText.TabIndex = 11;
             // 
-            // DestPort2Checked
+            // DestAddText
             // 
-            this.DestPort2Checked.AutoSize = true;
-            this.DestPort2Checked.Location = new System.Drawing.Point(375, 44);
-            this.DestPort2Checked.Name = "DestPort2Checked";
-            this.DestPort2Checked.Size = new System.Drawing.Size(76, 17);
-            this.DestPort2Checked.TabIndex = 16;
-            this.DestPort2Checked.Text = "Use Port 2";
-            this.DestPort2Checked.UseVisualStyleBackColor = true;
+            this.DestAddText.Location = new System.Drawing.Point(194, 16);
+            this.DestAddText.Name = "DestAddText";
+            this.DestAddText.Size = new System.Drawing.Size(100, 20);
+            this.DestAddText.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(181, 13);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Destination Address | Host | Interface";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(7, 46);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Destination Mask";
             // 
             // ASAACLControl
             // 
@@ -392,7 +375,7 @@
             this.Controls.Add(this.ExtendedChecked);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Name = "ASAACLControl";
-            this.Size = new System.Drawing.Size(798, 230);
+            this.Size = new System.Drawing.Size(861, 174);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -419,8 +402,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox SrcHostChecked;
         private System.Windows.Forms.CheckBox SrcOpPortChecked;
-        private System.Windows.Forms.TextBox SrcIntText;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox SrcIntChecked;
         private System.Windows.Forms.Label label2131;
         private System.Windows.Forms.CheckBox SrcPort2Checked;
         private System.Windows.Forms.TextBox SrcPort2Text;
@@ -432,7 +414,6 @@
         private System.Windows.Forms.TextBox DestOpPortText;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox DestIntChecked;
-        private System.Windows.Forms.TextBox DestIntText;
         private System.Windows.Forms.TextBox DestMaskText;
         private System.Windows.Forms.TextBox DestAddText;
         private System.Windows.Forms.Label label7;

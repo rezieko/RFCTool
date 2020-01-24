@@ -58,7 +58,8 @@ namespace Cisco_Tool_Box
                     return "interface " + InterfaceText.Text + "\n" + "ip access-group " + IDText.Text + " out \n" + "exit \n";
                 }
             }
-            return "";        }
+            return "";        
+        }
  
         private string GetExtendedACLControls()
         {
