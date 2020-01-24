@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{951F6EDA-7C30-4511-B212-51F7EC3CA37A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Cisco_Tool_Box</RootNamespace>
+    <AssemblyName>Cisco Tool Box</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACLs\ExtendedPermitDenyRemarkBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ACLs\ExtendedPermitDenyRemarkBox.Designer.cs">
+      <DependentUpon>ExtendedPermitDenyRemarkBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced Security\AssignAdminRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced Security\AssignAdminRole.Designer.cs">
+      <DependentUpon>AssignAdminRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AAA\ASANTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AAA\ASANTP.Designer.cs">
+      <DependentUpon>ASANTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASAACL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASAACL.Designer.cs">
+      <DependentUpon>ASAACL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASAACLControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ASAACLControl.Designer.cs">
+      <DependentUpon>ASAACLControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASA\ASANAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASA\ASANAT.Designer.cs">
+      <DependentUpon>ASANAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASA\ASAAAA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASA\ASAAAA.Designer.cs">
+      <DependentUpon>ASAAAA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASA\ASADHCP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASA\ASADHCP.Designer.cs">
+      <DependentUpon>ASADHCP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASA\ASARemoteAccessServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASA\ASARemoteAccessServices.Designer.cs">
+      <DependentUpon>ASARemoteAccessServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASA\ASAInterfaces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASA\ASAInterfaces.Designer.cs">
+      <DependentUpon>ASAInterfaces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASA\ASABasics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASA\ASABasics.Designer.cs">
+      <DependentUpon>ASABasics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic Device Configurations\BasicConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic Device Configurations\BasicConfig.Designer.cs">
+      <DependentUpon>BasicConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced Device Configurations\DHCP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced Device Configurations\DHCP.Designer.cs">
+      <DependentUpon>DHCP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced Security\MonitorAndManagingDevices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced Security\MonitorAndManagingDevices.Designer.cs">
+      <DependentUpon>MonitorAndManagingDevices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AAA\LocalAuthentication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AAA\LocalAuthentication.Designer.cs">
+      <DependentUpon>LocalAuthentication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AAA\EnableAuthenOnVTY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AAA\EnableAuthenOnVTY.Designer.cs">
+      <DependentUpon>EnableAuthenOnVTY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASA\ASADefaultRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASA\ASADefaultRoute.Designer.cs">
+      <DependentUpon>ASADefaultRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASA\Objects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASA\Objects.Designer.cs">
+      <DependentUpon>Objects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASA\ObjectGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASA\ObjectGroup.Designer.cs">
+      <DependentUpon>ObjectGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VPN\CryptoACL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VPN\CryptoACL.Designer.cs">
+      <DependentUpon>CryptoACL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VPN\CryptoACLandMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VPN\CryptoACLandMap.Designer.cs">
+      <DependentUpon>CryptoACLandMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VPN\TransformSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VPN\TransformSet.Designer.cs">
+      <DependentUpon>TransformSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VPN\ISAKMPPara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VPN\ISAKMPPara.Designer.cs">
+      <DependentUpon>ISAKMPPara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VPN\CompatibleIPSecVPNACLs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VPN\CompatibleIPSecVPNACLs.Designer.cs">
+      <DependentUpon>CompatibleIPSecVPNACLs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VPN\IPSecVPNACL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VPN\IPSecVPNACL.Designer.cs">
+      <DependentUpon>IPSecVPNACL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VPN\GREVPN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VPN\GREVPN.Designer.cs">
+      <DependentUpon>GREVPN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\DynamicNAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\DynamicNAT.Designer.cs">
+      <DependentUpon>DynamicNAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced Device Configurations\SSH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced Device Configurations\SSH.Designer.cs">
+      <DependentUpon>SSH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced Device Configurations\NTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced Device Configurations\NTP.Designer.cs">
+      <DependentUpon>NTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AAA\ServerBasedAuthentication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AAA\ServerBasedAuthentication.Designer.cs">
+      <DependentUpon>ServerBasedAuthentication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AAA\ServerBasedAuthorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AAA\ServerBasedAuthorization.Designer.cs">
+      <DependentUpon>ServerBasedAuthorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AAA\ServerBasedAccounting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AAA\ServerBasedAccounting.Designer.cs">
+      <DependentUpon>ServerBasedAccounting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VLANs\EncapsulationDot1Q.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VLANs\EncapsulationDot1Q.Designer.cs">
+      <DependentUpon>EncapsulationDot1Q.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced Security\EnhancedSecSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced Security\EnhancedSecSettings.Designer.cs">
+      <DependentUpon>EnhancedSecSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced Device Configurations\ExcludedAddressBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Advanced Device Configurations\ExcludedAddressBox.Designer.cs">
+      <DependentUpon>ExcludedAddressBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ACLs\ExtendedACLs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ACLs\ExtendedACLs.Designer.cs">
+      <DependentUpon>ExtendedACLs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VLANs\Trunking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VLANs\Trunking.Designer.cs">
+      <DependentUpon>Trunking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VLANs\InterfaceVlanBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VLANs\InterfaceVlanBox.Designer.cs">
+      <DependentUpon>InterfaceVlanBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic Device Configurations\IPDefaultGateway.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic Device Configurations\IPDefaultGateway.Designer.cs">
+      <DependentUpon>IPDefaultGateway.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic Device Configurations\IPv4Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic Device Configurations\IPv4Config.Designer.cs">
+      <DependentUpon>IPv4Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Switchport Security\MACAddressSecurity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Switchport Security\MACAddressSecurity.Designer.cs">
+      <DependentUpon>MACAddressSecurity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced Device Configurations\NetworkBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Advanced Device Configurations\NetworkBox.Designer.cs">
+      <DependentUpon>NetworkBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced Device Configurations\OSPF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced Device Configurations\OSPF.Designer.cs">
+      <DependentUpon>OSPF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced Security\Passwords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced Security\Passwords.Designer.cs">
+      <DependentUpon>Passwords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\PortFowarding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\PortFowarding.Designer.cs">
+      <DependentUpon>PortFowarding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced Security\SecureLocalDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced Security\SecureLocalDatabase.Designer.cs">
+      <DependentUpon>SecureLocalDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ACLs\StandardPermitDenyRemarkBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ACLs\StandardPermitDenyRemarkBox.Designer.cs">
+      <DependentUpon>StandardPermitDenyRemarkBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Advanced Device Configurations\RIPProtocol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced Device Configurations\RIPProtocol.Designer.cs">
+      <DependentUpon>RIPProtocol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Switchport Security\InterfaceSecurity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Switchport Security\InterfaceSecurity.Designer.cs">
+      <DependentUpon>InterfaceSecurity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced Device Configurations\Routing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced Device Configurations\Routing.Designer.cs">
+      <DependentUpon>Routing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ACLs\StandardACLs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ACLs\StandardACLs.Designer.cs">
+      <DependentUpon>StandardACLs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\StaticNAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\StaticNAT.Designer.cs">
+      <DependentUpon>StaticNAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\NATInterfacesBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NAT\NATInterfacesBox.Designer.cs">
+      <DependentUpon>NATInterfacesBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toolbox.Designer.cs">
+      <DependentUpon>Toolbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VLANs\VLAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VLANs\VLAN.Designer.cs">
+      <DependentUpon>VLAN.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ACLs\ExtendedPermitDenyRemarkBox.resx">
+      <DependentUpon>ExtendedPermitDenyRemarkBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced Security\AssignAdminRole.resx">
+      <DependentUpon>AssignAdminRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AAA\ASANTP.resx">
+      <DependentUpon>ASANTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASAACL.resx">
+      <DependentUpon>ASAACL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASAACLControl.resx">
+      <DependentUpon>ASAACLControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASA\ASANAT.resx">
+      <DependentUpon>ASANAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASA\ASAAAA.resx">
+      <DependentUpon>ASAAAA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASA\ASADHCP.resx">
+      <DependentUpon>ASADHCP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASA\ASARemoteAccessServices.resx">
+      <DependentUpon>ASARemoteAccessServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASA\ASAInterfaces.resx">
+      <DependentUpon>ASAInterfaces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASA\ASABasics.resx">
+      <DependentUpon>ASABasics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic Device Configurations\BasicConfig.resx">
+      <DependentUpon>BasicConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced Device Configurations\DHCP.resx">
+      <DependentUpon>DHCP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced Security\MonitorAndManagingDevices.resx">
+      <DependentUpon>MonitorAndManagingDevices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AAA\LocalAuthentication.resx">
+      <DependentUpon>LocalAuthentication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AAA\EnableAuthenOnVTY.resx">
+      <DependentUpon>EnableAuthenOnVTY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASA\ASADefaultRoute.resx">
+      <DependentUpon>ASADefaultRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASA\Objects.resx">
+      <DependentUpon>Objects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASA\ObjectGroup.resx">
+      <DependentUpon>ObjectGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VPN\CryptoACL.resx">
+      <DependentUpon>CryptoACL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VPN\CryptoACLandMap.resx">
+      <DependentUpon>CryptoACLandMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VPN\TransformSet.resx">
+      <DependentUpon>TransformSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VPN\ISAKMPPara.resx">
+      <DependentUpon>ISAKMPPara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VPN\CompatibleIPSecVPNACLs.resx">
+      <DependentUpon>CompatibleIPSecVPNACLs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VPN\IPSecVPNACL.resx">
+      <DependentUpon>IPSecVPNACL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VPN\GREVPN.resx">
+      <DependentUpon>GREVPN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\DynamicNAT.resx">
+      <DependentUpon>DynamicNAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced Device Configurations\SSH.resx">
+      <DependentUpon>SSH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced Device Configurations\NTP.resx">
+      <DependentUpon>NTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AAA\ServerBasedAuthentication.resx">
+      <DependentUpon>ServerBasedAuthentication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AAA\ServerBasedAuthorization.resx">
+      <DependentUpon>ServerBasedAuthorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AAA\ServerBasedAccounting.resx">
+      <DependentUpon>ServerBasedAccounting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VLANs\EncapsulationDot1Q.resx">
+      <DependentUpon>EncapsulationDot1Q.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced Security\EnhancedSecSettings.resx">
+      <DependentUpon>EnhancedSecSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced Device Configurations\ExcludedAddressBox.resx">
+      <DependentUpon>ExcludedAddressBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ACLs\ExtendedACLs.resx">
+      <DependentUpon>ExtendedACLs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VLANs\Trunking.resx">
+      <DependentUpon>Trunking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VLANs\InterfaceVlanBox.resx">
+      <DependentUpon>InterfaceVlanBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic Device Configurations\IPDefaultGateway.resx">
+      <DependentUpon>IPDefaultGateway.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic Device Configurations\IPv4Config.resx">
+      <DependentUpon>IPv4Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Switchport Security\MACAddressSecurity.resx">
+      <DependentUpon>MACAddressSecurity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced Device Configurations\NetworkBox.resx">
+      <DependentUpon>NetworkBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced Device Configurations\OSPF.resx">
+      <DependentUpon>OSPF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced Security\Passwords.resx">
+      <DependentUpon>Passwords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\PortFowarding.resx">
+      <DependentUpon>PortFowarding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced Security\SecureLocalDatabase.resx">
+      <DependentUpon>SecureLocalDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ACLs\StandardPermitDenyRemarkBox.resx">
+      <DependentUpon>StandardPermitDenyRemarkBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Advanced Device Configurations\RIPProtocol.resx">
+      <DependentUpon>RIPProtocol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Switchport Security\InterfaceSecurity.resx">
+      <DependentUpon>InterfaceSecurity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced Device Configurations\Routing.resx">
+      <DependentUpon>Routing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ACLs\StandardACLs.resx">
+      <DependentUpon>StandardACLs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\StaticNAT.resx">
+      <DependentUpon>StaticNAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\NATInterfacesBox.resx">
+      <DependentUpon>NATInterfacesBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toolbox.resx">
+      <DependentUpon>Toolbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VLANs\VLAN.resx">
+      <DependentUpon>VLAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
