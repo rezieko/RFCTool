@@ -57,6 +57,10 @@ namespace Cisco_Tool_Box
             {
                 IntText += "control-plane ";
             }
+            IntText += "\n";
+
+
+
             IntText += "access-group " + Acl2Text.Text + " ";
             if (In2Checked.Checked)
             {
@@ -75,6 +79,7 @@ namespace Cisco_Tool_Box
             {
                 IntText += "control-plane ";
             }
+            IntText += "\n";
             return IntText;
         }
         private string GetACLControls()

@@ -86,6 +86,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button44 = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.button55 = new System.Windows.Forms.Button();
             this.button54 = new System.Windows.Forms.Button();
             this.button53 = new System.Windows.Forms.Button();
             this.button52 = new System.Windows.Forms.Button();
@@ -96,7 +97,7 @@
             this.button47 = new System.Windows.Forms.Button();
             this.button46 = new System.Windows.Forms.Button();
             this.button45 = new System.Windows.Forms.Button();
-            this.button55 = new System.Windows.Forms.Button();
+            this.button56 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -778,6 +779,7 @@
             // 
             // groupBox12
             // 
+            this.groupBox12.Controls.Add(this.button56);
             this.groupBox12.Controls.Add(this.button55);
             this.groupBox12.Controls.Add(this.button54);
             this.groupBox12.Controls.Add(this.button53);
@@ -792,10 +794,21 @@
             this.groupBox12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox12.Location = new System.Drawing.Point(384, 54);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(180, 349);
+            this.groupBox12.Size = new System.Drawing.Size(180, 373);
             this.groupBox12.TabIndex = 28;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "ASA";
+            // 
+            // button55
+            // 
+            this.button55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button55.Location = new System.Drawing.Point(6, 311);
+            this.button55.Name = "button55";
+            this.button55.Size = new System.Drawing.Size(75, 23);
+            this.button55.TabIndex = 10;
+            this.button55.Text = "ACL";
+            this.button55.UseVisualStyleBackColor = true;
+            this.button55.Click += new System.EventHandler(this.button55_Click);
             // 
             // button54
             // 
@@ -907,16 +920,16 @@
             this.button45.UseVisualStyleBackColor = true;
             this.button45.Click += new System.EventHandler(this.button45_Click);
             // 
-            // button55
+            // button56
             // 
-            this.button55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button55.Location = new System.Drawing.Point(6, 311);
-            this.button55.Name = "button55";
-            this.button55.Size = new System.Drawing.Size(75, 23);
-            this.button55.TabIndex = 10;
-            this.button55.Text = "ACL";
-            this.button55.UseVisualStyleBackColor = true;
-            this.button55.Click += new System.EventHandler(this.button55_Click);
+            this.button56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button56.Location = new System.Drawing.Point(7, 339);
+            this.button56.Name = "button56";
+            this.button56.Size = new System.Drawing.Size(75, 23);
+            this.button56.TabIndex = 11;
+            this.button56.Text = "MPF";
+            this.button56.UseVisualStyleBackColor = true;
+            this.button56.Click += new System.EventHandler(this.button56_Click);
             // 
             // Toolbox
             // 
@@ -1034,5 +1047,6 @@
         private System.Windows.Forms.Button button53;
         private System.Windows.Forms.Button button54;
         private System.Windows.Forms.Button button55;
+        private System.Windows.Forms.Button button56;
     }
 }

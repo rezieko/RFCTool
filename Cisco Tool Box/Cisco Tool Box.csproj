@@ -64,16 +64,16 @@
     <Compile Include="AAA\ASANTP.Designer.cs">
       <DependentUpon>ASANTP.cs</DependentUpon>
     </Compile>
-    <Compile Include="ASAACL.cs">
+    <Compile Include="ASA\ASAACL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ASAACL.Designer.cs">
+    <Compile Include="ASA\ASAACL.Designer.cs">
       <DependentUpon>ASAACL.cs</DependentUpon>
     </Compile>
-    <Compile Include="ASAACLControl.cs">
+    <Compile Include="ASA\ASAACLControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ASAACLControl.Designer.cs">
+    <Compile Include="ASA\ASAACLControl.Designer.cs">
       <DependentUpon>ASAACLControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ASA\ASANAT.cs">
@@ -159,6 +159,12 @@
     </Compile>
     <Compile Include="ASA\ObjectGroup.Designer.cs">
       <DependentUpon>ObjectGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASA\MPF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASA\MPF.Designer.cs">
+      <DependentUpon>MPF.cs</DependentUpon>
     </Compile>
     <Compile Include="VPN\CryptoACL.cs">
       <SubType>UserControl</SubType>
@@ -387,10 +393,10 @@
     <EmbeddedResource Include="AAA\ASANTP.resx">
       <DependentUpon>ASANTP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ASAACL.resx">
+    <EmbeddedResource Include="ASA\ASAACL.resx">
       <DependentUpon>ASAACL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ASAACLControl.resx">
+    <EmbeddedResource Include="ASA\ASAACLControl.resx">
       <DependentUpon>ASAACLControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ASA\ASANAT.resx">
@@ -434,6 +440,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ASA\ObjectGroup.resx">
       <DependentUpon>ObjectGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASA\MPF.resx">
+      <DependentUpon>MPF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VPN\CryptoACL.resx">
       <DependentUpon>CryptoACL.cs</DependentUpon>
