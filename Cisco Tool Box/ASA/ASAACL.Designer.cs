@@ -30,6 +30,10 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Out2Checked = new System.Windows.Forms.CheckBox();
+            this.In2Checked = new System.Windows.Forms.CheckBox();
+            this.Out1Checked = new System.Windows.Forms.CheckBox();
+            this.In1Checked = new System.Windows.Forms.CheckBox();
             this.Int2Text = new System.Windows.Forms.TextBox();
             this.Int1Text = new System.Windows.Forms.TextBox();
             this.Acl2Text = new System.Windows.Forms.TextBox();
@@ -46,10 +50,6 @@
             this.NumControls = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.BoxPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.In1Checked = new System.Windows.Forms.CheckBox();
-            this.Out1Checked = new System.Windows.Forms.CheckBox();
-            this.In2Checked = new System.Windows.Forms.CheckBox();
-            this.Out2Checked = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumControls)).BeginInit();
             this.SuspendLayout();
@@ -91,6 +91,46 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Apply to Interface";
+            // 
+            // Out2Checked
+            // 
+            this.Out2Checked.AutoSize = true;
+            this.Out2Checked.Location = new System.Drawing.Point(188, 122);
+            this.Out2Checked.Name = "Out2Checked";
+            this.Out2Checked.Size = new System.Drawing.Size(43, 17);
+            this.Out2Checked.TabIndex = 10;
+            this.Out2Checked.Text = "Out";
+            this.Out2Checked.UseVisualStyleBackColor = true;
+            // 
+            // In2Checked
+            // 
+            this.In2Checked.AutoSize = true;
+            this.In2Checked.Location = new System.Drawing.Point(188, 95);
+            this.In2Checked.Name = "In2Checked";
+            this.In2Checked.Size = new System.Drawing.Size(35, 17);
+            this.In2Checked.TabIndex = 9;
+            this.In2Checked.Text = "In";
+            this.In2Checked.UseVisualStyleBackColor = true;
+            // 
+            // Out1Checked
+            // 
+            this.Out1Checked.AutoSize = true;
+            this.Out1Checked.Location = new System.Drawing.Point(188, 69);
+            this.Out1Checked.Name = "Out1Checked";
+            this.Out1Checked.Size = new System.Drawing.Size(43, 17);
+            this.Out1Checked.TabIndex = 8;
+            this.Out1Checked.Text = "Out";
+            this.Out1Checked.UseVisualStyleBackColor = true;
+            // 
+            // In1Checked
+            // 
+            this.In1Checked.AutoSize = true;
+            this.In1Checked.Location = new System.Drawing.Point(188, 42);
+            this.In1Checked.Name = "In1Checked";
+            this.In1Checked.Size = new System.Drawing.Size(35, 17);
+            this.In1Checked.TabIndex = 7;
+            this.In1Checked.Text = "In";
+            this.In1Checked.UseVisualStyleBackColor = true;
             // 
             // Int2Text
             // 
@@ -211,9 +251,24 @@
             // NumControls
             // 
             this.NumControls.Location = new System.Drawing.Point(94, 198);
+            this.NumControls.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.NumControls.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.NumControls.Name = "NumControls";
             this.NumControls.Size = new System.Drawing.Size(35, 20);
             this.NumControls.TabIndex = 2;
+            this.NumControls.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.NumControls.ValueChanged += new System.EventHandler(this.NumControls_ValueChanged);
             // 
             // label5
@@ -233,46 +288,6 @@
             this.BoxPanel.Name = "BoxPanel";
             this.BoxPanel.Size = new System.Drawing.Size(0, 0);
             this.BoxPanel.TabIndex = 4;
-            // 
-            // In1Checked
-            // 
-            this.In1Checked.AutoSize = true;
-            this.In1Checked.Location = new System.Drawing.Point(188, 42);
-            this.In1Checked.Name = "In1Checked";
-            this.In1Checked.Size = new System.Drawing.Size(35, 17);
-            this.In1Checked.TabIndex = 7;
-            this.In1Checked.Text = "In";
-            this.In1Checked.UseVisualStyleBackColor = true;
-            // 
-            // Out1Checked
-            // 
-            this.Out1Checked.AutoSize = true;
-            this.Out1Checked.Location = new System.Drawing.Point(188, 69);
-            this.Out1Checked.Name = "Out1Checked";
-            this.Out1Checked.Size = new System.Drawing.Size(43, 17);
-            this.Out1Checked.TabIndex = 8;
-            this.Out1Checked.Text = "Out";
-            this.Out1Checked.UseVisualStyleBackColor = true;
-            // 
-            // In2Checked
-            // 
-            this.In2Checked.AutoSize = true;
-            this.In2Checked.Location = new System.Drawing.Point(188, 95);
-            this.In2Checked.Name = "In2Checked";
-            this.In2Checked.Size = new System.Drawing.Size(35, 17);
-            this.In2Checked.TabIndex = 9;
-            this.In2Checked.Text = "In";
-            this.In2Checked.UseVisualStyleBackColor = true;
-            // 
-            // Out2Checked
-            // 
-            this.Out2Checked.AutoSize = true;
-            this.Out2Checked.Location = new System.Drawing.Point(188, 122);
-            this.Out2Checked.Name = "Out2Checked";
-            this.Out2Checked.Size = new System.Drawing.Size(43, 17);
-            this.Out2Checked.TabIndex = 10;
-            this.Out2Checked.Text = "Out";
-            this.Out2Checked.UseVisualStyleBackColor = true;
             // 
             // ASAACL
             // 
