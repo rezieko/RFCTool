@@ -71,27 +71,27 @@ namespace Cisco_Tool_Box
 
         private void button6_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://docs.google.com/document/d/1kVK-HXbq-Q5xYlBLPWMGFiUnGDmDQYXQqWPpEMurnOY/edit?usp=sharing");
+            System.Diagnostics.Process.Start("");
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://150566673.netacad.com/login/canvas");
+            System.Diagnostics.Process.Start("");
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText("125299cp");
+            Clipboard.SetText("");
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText("JUAZ-JTKX-SPBWcp1A");
+            Clipboard.SetText("");
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText("michael.claiborn@cfisd.net");
+            Clipboard.SetText("");
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
